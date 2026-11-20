@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.BantuDisabilitas"
+        parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimary">#0878D1</item>
+        <item name="colorPrimaryContainer">#D9ECFA</item>
+        <item name="colorSecondary">#16A6A1</item>
+        <item name="colorSecondaryContainer">#D7F3EF</item>
+
+        <item name="android:windowBackground">#F4F8FC</item>
+        <item name="android:statusBarColor">#F4F8FC</item>
+        <item name="android:navigationBarColor">#F4F8FC</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+
+    <style name="Theme.BantuDisabilitas"
+        parent="Base.Theme.BantuDisabilitas" />
+
+</resources>

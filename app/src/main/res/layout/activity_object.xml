@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F8FF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- TOMBOL KEMBALI -->
+        <TextView
+            android:id="@+id/btnKembali"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="10dp"
+            android:text="← Kembali"
+            android:textColor="#0878D1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deteksi Objek AI"
+            android:textColor="#122448"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Kenali benda di sekitar Anda menggunakan teknologi AI."
+            android:textColor="#526783"
+            android:textSize="15sp" />
+
+        <!-- Kartu pengenalan AI -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_info_card"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asisten Pengenal Benda"
+                android:textColor="#1459B8"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Ambil foto atau pilih gambar dari galeri untuk mengenali objek."
+                android:textColor="#334B6B"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Area Pratinjau Gambar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_info_card"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/ivPratinjauObjek"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Pratinjau gambar deteksi objek"
+                android:scaleType="fitCenter"
+                android:src="@android:drawable/ic_menu_camera"
+                android:background="#EAF3FF"
+                android:padding="12dp" />
+
+        </LinearLayout>
+
+        <!-- Tombol kamera -->
+        <Button
+            android:id="@+id/btnKameraObjek"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#1976D2"
+            android:text="Ambil Foto"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <!-- Tombol galeri -->
+        <Button
+            android:id="@+id/btnGaleriObjek"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#15966D"
+            android:text="Pilih dari Galeri"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <!-- Kartu hasil deteksi -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_info_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HASIL DETEKSI AI"
+                android:textColor="#1459B8"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvHasilObjek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="#FFFFFF"
+                android:minHeight="130dp"
+                android:padding="16dp"
+                android:text="Objek yang terdeteksi akan muncul di sini."
+                android:textColor="#26364D"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnBacaObjek"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#1976D2"
+                android:text="Bacakan Hasil"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="14dp"
+            android:text="Tips: Gunakan foto yang terang dan tidak buram agar AI lebih mudah mengenali objek."
+            android:textColor="#526783"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</ScrollView>

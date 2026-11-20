@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F8FC">
+
+    <!-- HEADER TETAP -->
+    <LinearLayout
+        android:id="@+id/headerLayanan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💙 Cyla Care"
+            android:textColor="#0878D1"
+            android:textSize="23sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Jelajahi Layanan"
+            android:textColor="#183B56"
+            android:textSize="27sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Temukan berbagai layanan untuk membantu aktivitas dan meningkatkan kemandirian Anda."
+            android:textColor="#647B8D"
+            android:textSize="13sp"/>
+
+        <EditText
+            android:id="@+id/etCariLayanan"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_search"
+            android:hint="🔍  Cari layanan..."
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#183B56"
+            android:textColorHint="#91A4B3"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:inputType="text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Kategori Layanan"
+            android:textColor="#183B56"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btnSemua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_category_active"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="Semua"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:id="@+id/btnVisual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="9dp"
+                    android:background="@drawable/bg_search"
+                    android:gravity="center"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:text="Visual"
+                    android:textColor="#36566C"
+                    android:textSize="13sp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:id="@+id/btnKomunikasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="9dp"
+                    android:background="@drawable/bg_search"
+                    android:gravity="center"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:text="Komunikasi"
+                    android:textColor="#36566C"
+                    android:textSize="13sp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:id="@+id/btnAksesibilitas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="9dp"
+                    android:background="@drawable/bg_search"
+                    android:gravity="center"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:text="Aksesibilitas"
+                    android:textColor="#36566C"
+                    android:textSize="13sp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/tvJudulDaftarLayanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Semua Layanan"
+            android:textColor="#183B56"
+            android:textSize="19sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvDeskripsiDaftar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Pilih layanan yang sesuai dengan kebutuhan Anda."
+            android:textColor="#718797"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+
+    <!-- DAFTAR LAYANAN -->
+    <ScrollView
+        android:id="@+id/scrollLayanan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="false"
+        android:clipToPadding="false"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/headerLayanan"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ASISTEN VISUAL -->
+            <LinearLayout
+                android:id="@+id/cardAsistenVisual"
+                style="@style/LayananCard"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    style="@style/LayananIcon"
+                    android:text="👁️"/>
+
+                <TextView
+                    style="@style/LayananTitle"
+                    android:text="Asisten Visual (OCR)"/>
+
+                <TextView
+                    style="@style/LayananDescription"
+                    android:text="Membantu membaca tulisan, dokumen, dan teks melalui kamera atau galeri."/>
+
+                <TextView
+                    style="@style/LayananLink"
+                    android:text="Buka layanan →"/>
+            </LinearLayout>
+
+            <!-- DETEKSI OBJEK -->
+            <LinearLayout
+                android:id="@+id/cardDeteksiObjek"
+                style="@style/LayananCard"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    style="@style/LayananIcon"
+                    android:text="🤖"/>
+
+                <TextView
+                    style="@style/LayananTitle"
+                    android:text="Deteksi Objek AI"/>
+
+                <TextView
+                    style="@style/LayananDescription"
+                    android:text="Mengenali benda di sekitar menggunakan kamera dan teknologi kecerdasan buatan."/>
+
+                <TextView
+                    style="@style/LayananLink"
+                    android:text="Buka layanan →"/>
+            </LinearLayout>
+
+            <!-- KOMUNIKASI -->
+            <LinearLayout
+                android:id="@+id/cardKomunikasi"
+                style="@style/LayananCard"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    style="@style/LayananIcon"
+                    android:text="💬"/>
+
+                <TextView
+                    style="@style/LayananTitle"
+                    android:text="Komunikasi Teks dan Suara"/>
+
+                <TextView
+                    style="@style/LayananDescription"
+                    android:text="Membantu komunikasi melalui tulisan, suara, dan kalimat cepat."/>
+
+                <TextView
+                    style="@style/LayananLink"
+                    android:text="Buka layanan →"/>
+            </LinearLayout>
+
+            <!-- AKSESIBILITAS -->
+            <LinearLayout
+                android:id="@+id/cardAksesibilitas"
+                style="@style/LayananCard"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    style="@style/LayananIcon"
+                    android:text="♿"/>
+
+                <TextView
+                    style="@style/LayananTitle"
+                    android:text="Aksesibilitas Android"/>
+
+                <TextView
+                    style="@style/LayananDescription"
+                    android:text="Pengaturan ukuran teks, kontras, suara, dan kemudahan penggunaan aplikasi."/>
+
+                <TextView
+                    style="@style/LayananLink"
+                    android:text="Buka layanan →"/>
+            </LinearLayout>
+
+            <!-- ALAT BANTU -->
+            <LinearLayout
+                android:id="@+id/cardAlatBantu"
+                style="@style/LayananCard"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    style="@style/LayananIcon"
+                    android:text="🦽"/>
+
+                <TextView
+                    style="@style/LayananTitle"
+                    android:text="Mobility Aid"/>
+
+                <TextView
+                    style="@style/LayananDescription"
+                    android:text="Informasi kursi roda, tongkat, walker, dan berbagai alat bantu mobilitas."/>
+
+                <TextView
+                    style="@style/LayananLink"
+                    android:text="Buka layanan →"/>
+            </LinearLayout>
+
+            <!-- BANTUAN DARURAT: SATU KARTU -->
+            <LinearLayout
+                android:id="@+id/cardBantuan"
+                style="@style/LayananCard"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    style="@style/LayananIcon"
+                    android:text="🆘"/>
+
+                <TextView
+                    style="@style/LayananTitle"
+                    android:text="Bantuan dan Darurat"/>
+
+                <TextView
+                    style="@style/LayananDescription"
+                    android:text="Akses kontak darurat, ambulans, polisi, pemadam kebakaran, dan layanan pertolongan."/>
+
+                <TextView
+                    style="@style/LayananLink"
+                    android:text="Lihat pilihan bantuan →"/>
+            </LinearLayout>
+
+            <!-- PANDUAN -->
+            <LinearLayout
+                android:id="@+id/cardPanduan"
+                style="@style/LayananCard"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    style="@style/LayananIcon"
+                    android:text="📘"/>
+
+                <TextView
+                    style="@style/LayananTitle"
+                    android:text="Panduan Disabilitas"/>
+
+                <TextView
+                    style="@style/LayananDescription"
+                    android:text="Informasi, edukasi, hak disabilitas, dan tips aktivitas sehari-hari."/>
+
+                <TextView
+                    style="@style/LayananLink"
+                    android:text="Buka layanan →"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- NAVIGASI BAWAH -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:elevation="12dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- BERANDA -->
+        <LinearLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⌂"
+                android:textSize="23sp"
+                android:textColor="#526B80"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beranda"
+                android:textSize="11sp"
+                android:textColor="#526B80"/>
+        </LinearLayout>
+
+        <!-- LAYANAN -->
+        <LinearLayout
+            android:id="@+id/navLayanan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="▦"
+                android:textSize="23sp"
+                android:textColor="#0878D1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Layanan"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#0878D1"/>
+        </LinearLayout>
+
+        <!-- CATATAN -->
+        <LinearLayout
+            android:id="@+id/navCatatan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="▤"
+                android:textSize="23sp"
+                android:textColor="#526B80"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Catatan"
+                android:textSize="11sp"
+                android:textColor="#526B80"/>
+        </LinearLayout>
+
+        <!-- PROFIL -->
+        <LinearLayout
+            android:id="@+id/navProfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="●"
+                android:textSize="19sp"
+                android:textColor="#526B80"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profil"
+                android:textSize="11sp"
+                android:textColor="#526B80"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

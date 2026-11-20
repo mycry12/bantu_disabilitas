@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Izin kamera -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Kamera opsional -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BantuDisabilitas"
+        tools:targetApi="31">
+
+        <!-- Halaman Login -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Halaman Beranda -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- Halaman OCR -->
+        <activity
+            android:name=".OcrActivity"
+            android:exported="false" />
+
+        <!-- Halaman Deteksi Objek AI -->
+        <activity
+            android:name=".ObjectActivity"
+            android:exported="false" />
+
+        <!-- Halaman Fitur -->
+        <activity
+            android:name=".FeatureActivity"
+            android:exported="false" />
+
+        <!-- Halaman Aksesibilitas -->
+        <activity
+            android:name=".AccessibilityActivity"
+            android:exported="false" />
+
+        <!-- Halaman Komunikasi Teks dan Suara -->
+        <activity
+            android:name=".CommunicationActivity"
+            android:exported="false" />
+
+        <!-- Halaman Alat Bantu Mobilitas -->
+        <activity
+            android:name=".MobilityAidActivity"
+            android:exported="false" />
+
+        <!-- Halaman Profil -->
+        <activity
+            android:name=".ProfilActivity"
+            android:exported="false" />
+
+        <!-- Halaman Layanan -->
+        <activity
+            android:name=".LayananActivity"
+            android:exported="false" />
+
+        <!-- Halaman Catatan -->
+        <activity
+            android:name=".NoteTakerActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

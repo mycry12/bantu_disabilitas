@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F8FC"
+    android:fillViewport="true"
+    android:contentDescription="Halaman pengaturan aksesibilitas Cyla Care">
+
+    <LinearLayout
+        android:id="@+id/layoutAkses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <TextView
+            android:id="@+id/btnKembali"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:paddingEnd="16dp"
+            android:text="‹ Kembali"
+            android:textColor="#142D4E"
+            android:textSize="16sp"
+            android:contentDescription="Kembali ke halaman sebelumnya"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/tvJudulAkses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Pengaturan Aksesibilitas"
+            android:textColor="#142D4E"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDeskripsiAkses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Atur tampilan dan suara agar Cyla Care lebih mudah digunakan oleh semua orang."
+            android:textColor="#52677F"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnTalkBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:minHeight="56dp"
+            android:text="Aktifkan Pengaturan TalkBack"
+            android:textSize="16sp"
+            android:contentDescription="Buka pengaturan aksesibilitas Android untuk mengaktifkan TalkBack" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TalkBack membacakan nama tombol, menu, dan teks di layar."
+            android:textColor="#52677F"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_home_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ukuran teks"
+                android:textColor="#142D4E"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvUkuran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Ukuran: 16 sp"
+                android:textColor="#52677F"
+                android:textSize="14sp" />
+
+            <SeekBar
+                android:id="@+id/seekUkuran"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:max="20"
+                android:progress="4"
+                android:contentDescription="Geser untuk mengatur ukuran contoh teks" />
+
+            <TextView
+                android:id="@+id/tvContohTeks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="#EAF5F5"
+                android:padding="16dp"
+                android:text="Ini adalah contoh teks yang dapat diperbesar."
+                android:textColor="#142D4E"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_home_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kontras tinggi"
+                android:textColor="#142D4E"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/cbKontras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:minHeight="48dp"
+                android:text="Aktifkan tampilan kontras tinggi"
+                android:textColor="#142D4E"
+                android:textSize="16sp"
+                android:contentDescription="Aktifkan atau nonaktifkan tampilan kontras tinggi" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_home_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pembaca teks"
+                android:textColor="#142D4E"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tekan tombol untuk mendengarkan contoh teks."
+                android:textColor="#52677F"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnBaca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:minHeight="56dp"
+                android:text="Bacakan Contoh Teks"
+                android:textSize="16sp"
+                android:contentDescription="Bacakan contoh teks menggunakan suara" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Cyla Care — Teknologi untuk semua"
+            android:textColor="#52677F"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>
